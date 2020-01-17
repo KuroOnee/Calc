@@ -1,26 +1,5 @@
 #include <stdio.h>
-struct complex
-{
-	float real;
-	float img;
-};
-
-void add(struct complex f, struct complex s, struct complex *r){
-	r -> real = f.real + s.real;
-	r -> img = f.img + s.img;
-};
-void sub(struct complex f, struct complex s, struct complex *r){
-	r -> real = f.real - s.real;
-	r -> img = f.img - s.img;
-};
-void mult(struct complex f, struct complex s, struct complex *r){
-	r -> real = ((f.real * s.real) - (f.img * s.img));
-	r -> img = ((f.real * s.img) + (f.img * s.real));
-};
-void div(struct complex f, struct complex s, struct complex *r){
-	r -> real = ((f.real * s.real) + (f.img * s.img))/((s.real*s.real)+(s.img*s.img));
-	r -> img = ((f.img * s.real) - (f.real * s.img))/((s.real*s.real)+(s.img*s.img));
-};
+#include "calc.h"
 
 int main ()
 {
